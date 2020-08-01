@@ -5,6 +5,174 @@
  <meta charset="UTF-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
  <style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,200');
+    body {   font-family: Helvetica, san-serif;
+      background: -webkit-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* Chrome 10+, Saf5.1+ */
+      background:    -moz-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* FF3.6+ */
+      background:     -ms-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* IE10 */
+      background:      -o-linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* Opera 11.10+ */
+      background:         linear-gradient(90deg, #00aaee 10%, #DD2476 90%); /* W3C */ }
+    .transition { transition: .3s cubic-bezier(.3, 0, 0, 1.3) }
+    .card {
+        background-color: #fff;
+        bottom: 0;
+        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+      -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+        height: 300px;
+        left: 0;
+        margin: auto;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 200px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .fard {
+        background-color: #fff;
+        bottom: 0;
+        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+      -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+        height: 300px;
+        left: 0;
+        margin: auto;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 200px;
+        margin-right: 0px;
+        margin-top: 0px;
+        
+    }
+    .card:hover {
+        height: 450px;
+        width: 300px;
+       
+    }
+    .card:hover .cta-container {
+        display: inline;
+        
+    }
+    .card:hover .card_circle {
+        background-size: cover;
+        border-radius: 0;
+        margin-top: -130px;
+    }
+    .card:hover h2 {
+        background: #3487f7;
+        color: #fff;
+        margin-top: 100px;
+        padding: 5px;
+    }
+    .card:hover h2 small { color: #fff }
+    .card:hover p { margin-top: 300px }
+    .card_circle {
+        background: url('d:/war.png') no-repeat center bottom;
+        background-color: #3487f7;
+        background-size: cover;
+        border-radius: 50%;
+        height: 400px;
+        margin-left: -75px;
+        margin-top: -270px;
+        position: absolute;
+        width: 450px;
+    }
+    .fard:hover {
+        height: 450px;
+        width: 300px;
+    }
+    .fard:hover .cta-container {
+        display: inline;
+        
+    }
+    .fard:hover .card_circle {
+        background-size: cover;
+        border-radius: 0;
+        margin-top: -130px;
+    }
+    .fard:hover h2 {
+        background: #3487f7;
+        color: #fff;
+        margin-top: 100px;
+        padding: 5px;
+    }
+    .fard:hover h2 small { color: #fff }
+    .fard:hover p { margin-top: 300px }
+    .fard_circle {
+        background: url('d:/war.png') no-repeat center bottom;
+        background-color: #3487f7;
+        background-size: cover;
+        border-radius: 50%;
+        height: 400px;
+        margin-left: -75px;
+        margin-top: -270px;
+        position: absolute;
+        width: 450px;
+    }
+    h2.transition {
+        color: #3487f7;
+        font-family: 'Raleway', sans-serif;
+        font-size: 24px;
+        font-weight: 200;
+        margin-top: 150px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 9999;
+    }
+    p {
+        color: rgba(0,0,0,.6);
+        font-family: 'Raleway', sans-serif;
+        font-size: 100%;
+        font-weight: normal;
+        margin-top: 200px;
+        position: absolute;
+        text-align: center;
+        z-index: 9999;
+    }
+    .cta-container {
+        display: none;
+        margin-top: 320px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 9999;
+    }
+    .cta {
+        margin-top: 20px;
+        -moz-border-radius: 2px;
+        -moz-transition: 0.2s ease-out;
+        -ms-transition: 0.2s ease-out;
+        -o-transition: 0.2s ease-out;
+        -webkit-border-radius: 2px;
+        -webkit-transition: 0.2s ease-out;
+        background-clip: padding-box;
+        border: 2px solid #3487f7;
+        border-radius: 2px;
+        color: #3487f7;
+        display: inline-block;
+        font-family: 'Raleway', sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        height: 36px;
+        letter-spacing: 0.5px;
+        line-height: 36px;
+        padding: 0 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.2s ease-out;
+    }
+    .cta:hover {
+        background-color: #3487f7;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color: #fff;
+        -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
     .site-header{
     background-color:#f9578e;
     color:#f2f7f8;
@@ -14,7 +182,18 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    animation: color 2s infinite;
 }
+@keyframes color{
+    from{
+        background-color: #f9578e;
+    }
+    to{
+        background-color: #7a28d8;
+    }
+}
+
+
 .site-header-content{
 margin:10px;
 }
@@ -24,6 +203,19 @@ margin:10px;
     height: 200px;
     align-self:center; 
     box-shadow: 3px 5px 16px 6px #3F51B5;
+    animation: move 1s infinite;
+}
+@keyframes move{
+    from{
+        margin-left: 70px;
+        width: 210px;
+        height: 210px;
+    }
+    to{
+        margin-left: 50px;
+        height: 190px;
+        width: 190px;
+    }
 }
 .course-link{
     color:#f2f7f8;
@@ -104,8 +296,19 @@ body{
 </head>
 <body>
 <header class="site-header" >
-<img class="profile-pic" src="https://instagram.fccu11-1.fna.fbcdn.net/v/t51.2885-19/s150x150/85208016_520008088700724_7395882668090458112_n.jpg?_nc_ht=instagram.fccu11-1.fna.fbcdn.net&_nc_ohc=T4woTiZ0Sm8AX9NvjZ7&oh=a31858cca54697ee02f673e16b3b5d26&oe=5EF6FF4F">
-
+<img class="profile-pic" src="https://yt3.ggpht.com/-ro_9V1qkxg0/AAAAAAAAAAI/AAAAAAAAAAA/fSSsQR4LROo/s108-c-k-c0x00ffffff-no-rj-mo/photo.jpg">
+<div class="card transition">
+    <h2 class="transition">Martefy</h2>
+    <p>my shopping platform still not live but you can visit</p>
+    <div class="cta-container transition"><a href="#" class="cta">see my project</a></div>
+    <div class="card_circle transition"></div>
+  </div>
+  <div class="fard transition">
+    <h2 class="transition">University management system</h2>
+    <p>university managemnet system made in php</p>
+    <div class="cta-container transition"><a href="#" class="cta">see my project</a></div>
+    <div class="card_circle transition"></div>
+  </div>
 <h1>hi!I am  Sapna.I am a MCA final year student .I live in Delhi.</h1>
 <h2>Commerce graduate .Past expierence of teacher and admin manager.</h2>
 <h3>I am learning full stack .</h3>
